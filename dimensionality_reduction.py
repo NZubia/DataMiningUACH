@@ -10,6 +10,8 @@ from sklearn import datasets
 from sklearn.decomposition import PCA
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.feature_selection import SelectFromModel
+from sklearn.feature_selection import RFE
+from sklearn.linear_model import LogisticRegression
 
 
 # import matplotlib.pyplot as plt
@@ -85,9 +87,43 @@ def attribute_subset_selection_with_trees():
     print('\nNew feature vector:\n')
     print(new_feature_vector[:10])
 
+def recursive_feature_elimination(n_atributes):
+    # import data
+    iris = datasets.load_iris()
+    X = iris.data
+    Y = iris.target
+
+    # First 10 rows
+    print('Training Data:\n\n' + str(X[:10]))
+    print('\n')
+    print('Targets:\n\n' + str(Y[:10]))
+
+    # Create a base classifier used to evaluate a subset of attributes
+    #model_eval = ExtraTreesClassifier()
+
+    # Note: Feature selection change with different models
+    model_eval = LogisticRegression()
+
+    # Create the RFE model and select 3 attributes
+    rfe = RFE(model_eval, n_atributes)
+    rfe = rfe.fit(X, Y)
+
+    # Summarize the selection of the attributes
+    # Model information:
+    print('\nModel information:\n')
+    print('Feature Ranking: ' + str(rfe.ranking_))
+    print('Feature Selection: ' + str(rfe.support_))
+
+    # Model transformation
+    new_feature_vector = rfe.transform(X)
+
+    # First 10 rows of new feature vector
+    print('\nNew feature vector:\n')
+    print(new_feature_vector[:10])
 
 if __name__ == '__main__':
     # principal_components_analysis(2)
     # principal_components_analysis(.93)
 
-    attribute_subset_selection_with_trees()
+    # attribute_subset_selection_with_trees()
+    recursive_feature_elimination(2)
