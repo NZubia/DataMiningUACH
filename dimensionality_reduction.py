@@ -12,10 +12,8 @@ from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.feature_selection import SelectFromModel
 from sklearn.feature_selection import RFE
 from sklearn.linear_model import LogisticRegression
-
-
-# import matplotlib.pyplot as plt
-# from mpl_toolkits.mplot3d import Axes3D
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2
 
 def principal_components_analysis(n_components):
     # import data
@@ -30,9 +28,9 @@ def principal_components_analysis(n_components):
 
     # Model declaration
     if n_components < 1:
-        pca = PCA(n_components=n_components, svd_solver='full')
+        pca = PCA(n_components = n_components, svd_solver = 'full')
     else:
-        pca = PCA(n_components=n_components)
+        pca = PCA(n_components = n_components)
 
     # Model training
     pca.fit(X)
@@ -77,8 +75,8 @@ def attribute_subset_selection_with_trees():
     # display the relative importance of each attribute
     print('Importance of every feature: ' + str(extra_tree.feature_importances_))
 
-    #If model was training before prefit = True
-    model = SelectFromModel(extra_tree, prefit=True)
+    # If model was training before prefit = True
+    model = SelectFromModel(extra_tree, prefit = True)
 
     # Model transformation
     new_feature_vector = model.transform(X)
@@ -86,6 +84,7 @@ def attribute_subset_selection_with_trees():
     # First 10 rows of new feature vector
     print('\nNew feature vector:\n')
     print(new_feature_vector[:10])
+
 
 def recursive_feature_elimination(n_atributes):
     # import data
@@ -99,7 +98,7 @@ def recursive_feature_elimination(n_atributes):
     print('Targets:\n\n' + str(Y[:10]))
 
     # Create a base classifier used to evaluate a subset of attributes
-    #model_eval = ExtraTreesClassifier()
+    # model_eval = ExtraTreesClassifier()
 
     # Note: Feature selection change with different models
     model_eval = LogisticRegression()
@@ -111,8 +110,9 @@ def recursive_feature_elimination(n_atributes):
     # Summarize the selection of the attributes
     # Model information:
     print('\nModel information:\n')
+    print('New feature dimension: ' + str(rfe.n_features_))
     print('Feature Ranking: ' + str(rfe.ranking_))
-    print('Feature Selection: ' + str(rfe.support_))
+    print('Selected features: ' + str(rfe.support_))
 
     # Model transformation
     new_feature_vector = rfe.transform(X)
@@ -121,9 +121,46 @@ def recursive_feature_elimination(n_atributes):
     print('\nNew feature vector:\n')
     print(new_feature_vector[:10])
 
+
+def select_k_best_features(n_atributes):
+    # import data
+    iris = datasets.load_iris()
+    X = iris.data
+    Y = iris.target
+
+    # First 10 rows
+    print('Training Data:\n\n' + str(X[:10]))
+    print('\n')
+    print('Targets:\n\n' + str(Y[:10]))
+
+    # Model declaration
+    kbest = SelectKBest(score_func = chi2, k = n_atributes)
+
+    # Model training
+    kbest.fit(X, Y)
+
+    # Model transformation
+    new_feature_vector = kbest.transform(X)
+
+    # Summarize the selection of the attributes
+    # Model information:
+    print('\nModel information:\n')
+    print('Feature Scores: ' + str(kbest.scores_))
+
+    # Model transformation
+    new_feature_vector = kbest.transform(X)
+
+    # First 10 rows of new feature vector
+    print('\nNew feature vector:\n')
+    print(new_feature_vector[:10])
+
+
 if __name__ == '__main__':
     # principal_components_analysis(2)
     # principal_components_analysis(.93)
 
     # attribute_subset_selection_with_trees()
-    recursive_feature_elimination(2)
+
+    # recursive_feature_elimination(2)
+
+    select_k_best_features(2)
