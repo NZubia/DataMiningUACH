@@ -1,3 +1,12 @@
+"""
+Author: Normando Ali Zubia Hernández
+
+This file is created to explain the use of normalization
+with different tools in sklearn library.
+
+Every function contained in this file belongs to a different tool.
+"""
+
 from sklearn import preprocessing
 from sklearn import datasets
 
