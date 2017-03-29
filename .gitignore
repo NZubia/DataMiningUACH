@@ -4,3 +4,4 @@ pip-selfcheck.json
 include/
 .Python
 .idea/
+.DS_Store
