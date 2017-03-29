@@ -17,9 +17,9 @@ Así mismo realizar un análisis sobre los resultados obtenidos.
 
 Aplicar Principal Component Analysis, Attribute Subset Selection en los siquiente conjunto de datos:
 
-[Breast Cancer](http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
-[Wine](http://archive.ics.uci.edu/ml/datasets/Wine)
-[Forest](http://archive.ics.uci.edu/ml/datasets/Forest+Fires)
+* [Breast Cancer](http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
+* [Wine](http://archive.ics.uci.edu/ml/datasets/Wine)
+* [Forest](http://archive.ics.uci.edu/ml/datasets/Forest+Fires)
 
 Así mismo realizar un análisis sobre los resultados obtenidos.
 
@@ -27,8 +27,8 @@ Así mismo realizar un análisis sobre los resultados obtenidos.
 
 Aplicar normalización en los siguientes conjuntos de datos:
 
-[Breast Cancer](http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
-[Wine](http://archive.ics.uci.edu/ml/datasets/Wine)
+* [Breast Cancer](http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
+* [Wine](http://archive.ics.uci.edu/ml/datasets/Wine)
 
 Así mismo realizar un análisis sobre los resultados obtenidos.
 

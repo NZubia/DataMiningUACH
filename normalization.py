@@ -1,5 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """
-Author: Normando Ali Zubia Hernández
+Author: Normando Ali Zubia Hernandez
 
 This file is created to explain the use of normalization
 with different tools in sklearn library.

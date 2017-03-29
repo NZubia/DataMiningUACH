@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """
 Author: Normando Ali Zubia Hernández
 
@@ -98,10 +101,10 @@ def recursive_feature_elimination(n_atributes):
     print('Targets:\n\n' + str(Y[:10]))
 
     # Create a base classifier used to evaluate a subset of attributes
-    # model_eval = ExtraTreesClassifier()
+    model_eval = ExtraTreesClassifier()
 
     # Note: Feature selection change with different models
-    model_eval = LogisticRegression()
+    # model_eval = LogisticRegression()
 
     # Create the RFE model and select 3 attributes
     rfe = RFE(model_eval, n_atributes)
@@ -157,7 +160,7 @@ def select_k_best_features(n_atributes):
 
 if __name__ == '__main__':
     # principal_components_analysis(2)
-    # principal_components_analysis(.93)
+    # principal_components_analysis(.90)
 
     # attribute_subset_selection_with_trees()
 
