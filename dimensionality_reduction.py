@@ -18,6 +18,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 
+import pandas as pd
+import numpy
+
 def principal_components_analysis(n_components):
     # import data
     iris = datasets.load_iris()
@@ -157,6 +160,21 @@ def select_k_best_features(n_atributes):
     print('\nNew feature vector:\n')
     print(new_feature_vector[:10])
 
+def convert_data_to_numeric(data):
+    numpy_data = data.values
+
+    for i in range(len(numpy_data[0])):
+        temp = numpy_data[:,i]
+        dict = numpy.unique(numpy_data[:,i])
+        # print(dict)
+        for j in range(len(dict)):
+            # print(numpy.where(numpy_data[:,i] == dict[j]))
+            temp[numpy.where(numpy_data[:,i] == dict[j])] = j
+
+        numpy_data[:,i] = temp
+
+    return numpy_data
+
 
 if __name__ == '__main__':
     # principal_components_analysis(2)
@@ -166,4 +184,8 @@ if __name__ == '__main__':
 
     # recursive_feature_elimination(2)
 
-    select_k_best_features(2)
+    # select_k_best_features(2)
+
+    data = pd.read_csv('car.csv')
+    #print(data.describe)
+    print(convert_data_to_numeric(data))
