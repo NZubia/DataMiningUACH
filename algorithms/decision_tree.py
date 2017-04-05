@@ -13,7 +13,6 @@ from sklearn import datasets
 from sklearn import metrics
 from sklearn import tree
 
-# from IPython.display import Image
 # import pydotplus
 #
 # from sklearn.model_selection import cross_val_score
@@ -106,7 +105,7 @@ def decision_tree_training():
     #                                      special_characters=True)
     #
     # graph = pydotplus.graph_from_dot_data(dot_data)
-    # Image(graph.create_png())
+    # graph.write_pdf("iris.pdf")
 
 if __name__ == '__main__':
     decision_tree_training()
