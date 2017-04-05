@@ -24,7 +24,7 @@ Así mismo realizar un análisis sobre los resultados obtenidos y elegir cual fu
 
 Leer la documentación contenida en las siguientes direcciónes:
 
-* [Árboles de decisión] (http://scikit-learn.org/stable/modules/tree.html)
+* [Árboles de decisión](http://scikit-learn.org/stable/modules/tree.html)
 * [Documentación de función](http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier)
 
 Encontrar que otros paramétros se pueden cambiar y realizar experimentos para encontrar mejores resultados.
