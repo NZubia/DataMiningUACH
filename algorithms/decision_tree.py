@@ -13,7 +13,7 @@ from sklearn import datasets
 from sklearn import metrics
 from sklearn import tree
 
-# import pydotplus
+import pydotplus
 #
 # from sklearn.model_selection import cross_val_score
 
@@ -97,15 +97,15 @@ def decision_tree_training():
     print("Feature Importance: \n")
     print(dec_tree.feature_importances_)
 
-    # # Draw the tree
-    # dot_data = tree.export_graphviz(dec_tree, out_file=None,
-    #                                      feature_names=iris.feature_names,
-    #                                      class_names=iris.target_names,
-    #                                      filled=True, rounded=True,
-    #                                      special_characters=True)
-    #
-    # graph = pydotplus.graph_from_dot_data(dot_data)
-    # graph.write_pdf("iris.pdf")
+    # Draw the tree
+    dot_data = tree.export_graphviz(dec_tree, out_file=None,
+                                         feature_names=iris.feature_names,
+                                         class_names=iris.target_names,
+                                         filled=True, rounded=True,
+                                         special_characters=True)
+
+    graph = pydotplus.graph_from_dot_data(dot_data)
+    graph.write_pdf("iris.pdf")
 
 if __name__ == '__main__':
     decision_tree_training()
