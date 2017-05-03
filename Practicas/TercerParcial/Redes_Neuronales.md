@@ -22,5 +22,5 @@
 * Así mismo para obtener una mejora de resultados se aplicarán algoritmos de pre-procesamiento según su criterio.
 
 
-##Entregables
+## Entregables
 * Documento PDF con las dos prácticas documentadas
