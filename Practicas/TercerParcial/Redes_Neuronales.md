@@ -1,7 +1,7 @@
 # Tarea-Práctica Redes Neuronales
 
 ## Actividad 1 - Lectura
-* Leer el Capítulo 7 del libro "*Machine Learning With R*" (p. 205 - 217).
+* Leer el Capítulo 7 del libro "*Machine Learning With R*" (p. 205 - 225).
    * **Nota**.- El material será enviado por correo
 * Después de terminar la lectura, analizar las siguientes preguntas:
    1. ¿Cómo funciona una neurona?
@@ -14,13 +14,12 @@
 
 ## Actividad 2 - Práctica en R
 * Realizar práctica en R correspondiente al capítulo leido y corroborar los resultados con los presentados en el libro.
-   * **Nota**.- En la siguiente dirección se puede encontrar el conjunto de datos necesario: [Conjuntos de datos](https://drive.google.com/drive/folders/0B3nmr0aihNreNHFmYjVCcHVxTTg?usp=sharing)
+   * **Nota**.- En la siguiente dirección se puede encontrar el conjunto de datos necesario: [Conjuntos de datos](https://drive.google.com/drive/folders/0B3nmr0aihNreNHFmYjVCcHVxTTg?usp=sharing).
 
 ## Actividad 3 - Práctica en Python
-* Analizar código de ejemplo de redes neuronales contenido en el siguiente archivo: [Ejemplo Redes Neuronales](https://github.com/NZubia/DataMiningUACH/blob/master/algorithm_examples/neural_network_example.py)
-* Reproducir la práctica hecha en R pero en lenguaje Python tratando de obtener mejores resultados
-* Así mismo para obtener una mejora de resultados se aplicarán algoritmos de pre-procesamiento según su criterio.
+* Analizar código de ejemplo de redes neuronales contenido en el siguiente archivo: [Ejemplo Redes Neuronales](https://github.com/NZubia/DataMiningUACH/blob/master/algorithm_examples/neural_network_example.py).
+* Reproducir la práctica hecha anteriormente pero en lenguaje Python, tratando de obtener mejores resultados aplicando algoritmos de pre-procesamiento.
 
 
 ## Entregables
-* Documento PDF con las dos prácticas documentadas
+* Documento PDF con las dos prácticas documentadas.
