@@ -45,7 +45,7 @@ Usar el algoritmo de redes neuronales junto con algoritmos de pre-procesamiento 
 
 ## Actividad 6 - Camino hacia el Proyecto
 
-Usar el alrogitmo de redes neuronales para obtener una primera aproximación del problema planteado en el proyecto, así mismo realizar las siguientes actividades:
+Usar el algoritmo de redes neuronales para obtener una primera aproximación del problema planteado en el proyecto, así mismo realizar las siguientes actividades:
 * Realizar las transformaciones necesarias para que el algoritmo pueda encontrar los patrones necesarios
 * Usar diferentes algoritmos de pre-procesamiento para mejorar el error obtenido
 * **Nota:** El conjunto de datos puede ser encontrado en la siguiente dirección: [Sberbank Russian Housing Market](https://www.kaggle.com/c/sberbank-russian-housing-market/data)
